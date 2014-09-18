@@ -1,0 +1,11 @@
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\DAL.dll
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\DAL.pdb
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\FluentNHibernate.dll
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\Iesi.Collections.dll
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\NHibernate.dll
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\FluentNHibernate.xml
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\Iesi.Collections.xml
+G:\Temp Projects\AdventureWorks\DAL\DAL\bin\Debug\NHibernate.xml
+G:\Temp Projects\AdventureWorks\DAL\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\Temp Projects\AdventureWorks\DAL\DAL\obj\Debug\DAL.dll
+G:\Temp Projects\AdventureWorks\DAL\DAL\obj\Debug\DAL.pdb

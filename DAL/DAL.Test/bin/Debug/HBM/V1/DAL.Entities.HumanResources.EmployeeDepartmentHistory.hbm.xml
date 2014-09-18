@@ -1,0 +1,23 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="DAL.Entities.HumanResources.EmployeeDepartmentHistory, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="HumanResources.EmployeeDepartmentHistory">
+    <id name="Id" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BusinessEntityID" />
+      <generator class="identity" />
+    </id>
+    <property name="StartDate" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="StartDate" />
+    </property>
+    <property name="EndDate" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EndDate" not-null="false" />
+    </property>
+    <many-to-one cascade="all" class="DAL.Entities.HumanResources.Employee, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" lazy="false" name="Employee">
+      <column name="BusinessEntityID" />
+    </many-to-one>
+    <many-to-one cascade="all" class="DAL.Entities.HumanResources.Shift, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" lazy="false" name="Shift">
+      <column name="ShiftID" />
+    </many-to-one>
+    <many-to-one cascade="all" class="DAL.Entities.HumanResources.Department, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" lazy="false" name="Department">
+      <column name="DepartmentID" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

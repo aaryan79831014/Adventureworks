@@ -1,0 +1,26 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="DAL.Entities.HumanResources.Employee, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="HumanResources.Employee">
+    <id name="Id" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="BusinessEntityID" />
+      <generator class="assigned" />
+    </id>
+    <bag cascade="delete-orphan" name="EmploymentDepartmentHistories">
+      <key>
+        <column name="BusinessEntityID" />
+      </key>
+      <one-to-many class="DAL.Entities.HumanResources.EmployeeDepartmentHistory, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bag>
+    <property name="Gender" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Gender" />
+    </property>
+    <property name="JobTitle" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="JobTitle" />
+    </property>
+    <property name="MaritalStatus" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="MaritalStatus" />
+    </property>
+    <property name="NationalIDNumber" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="NationalIDNumber" />
+    </property>
+  </class>
+</hibernate-mapping>

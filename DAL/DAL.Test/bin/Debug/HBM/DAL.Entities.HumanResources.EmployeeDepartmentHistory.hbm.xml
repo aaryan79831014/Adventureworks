@@ -1,0 +1,21 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="DAL.Entities.HumanResources.EmployeeDepartmentHistory, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="HumanResources.EmployeeDepartmentHistory">
+    <composite-id>
+      <key-many-to-one name="Employee" class="DAL.Entities.HumanResources.Employee, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="BusinessEntityID" />
+      </key-many-to-one>
+      <key-many-to-one name="Shift" class="DAL.Entities.HumanResources.Shift, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="ShiftID" />
+      </key-many-to-one>
+      <key-many-to-one name="Department" class="DAL.Entities.HumanResources.Department, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <column name="DepartmentID" />
+      </key-many-to-one>
+      <key-property name="StartDate" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <column name="StartDate" />
+      </key-property>
+    </composite-id>
+    <property name="EndDate" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="EndDate" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>
